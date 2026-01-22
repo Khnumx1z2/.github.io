@@ -23,7 +23,12 @@
             color: #2c3e50;
             font-size: 1.25rem;
         }
-        p, ul {
+        h3 {
+            margin-top: 20px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+        p, ul, ol {
             margin-bottom: 16px;
         }
         strong {
@@ -49,14 +54,13 @@
             color: #666;
             text-align: center;
         }
-        /* Button Style for the Call to Action */
+        /* Button style for the main action */
         .btn-delete {
             display: inline-block;
             background-color: #d9534f;
-            color: white;
+            color: white !important;
             padding: 12px 24px;
             border-radius: 6px;
-            text-decoration: none;
             font-weight: bold;
             margin-top: 10px;
         }
@@ -69,12 +73,13 @@
 <body>
 
     <h1>Data Deletion Request</h1>
-    <p class="date">Last Updated: January 19, 2026</p>
+    <p class="date">Effective Date: January 19, 2026</p>
 
-    <p>At <strong>IFRS Coach</strong>, we respect your right to control your data. In accordance with Google Play's Data Safety policies, you may request the complete deletion of your account and associated data.</p>
+    <h2>1. Introduction</h2>
+    <p>At <strong>IFRS Coach</strong>, we respect your right to control your data. In accordance with Google Play's Data Safety policies and our Privacy Policy, you may request the complete deletion of your account and associated data at any time.</p>
 
-    <h2>What data will be deleted?</h2>
-    <p>When your deletion request is processed, the following data will be permanently removed from our servers:</p>
+    <h2>2. Data That Will Be Deleted</h2>
+    <p>When your deletion request is processed, the following data will be permanently removed from our servers (Google Firestore & Firebase Auth):</p>
     <ul>
         <li><strong>Account Credentials:</strong> Your registered email and encrypted password.</li>
         <li><strong>User Profile:</strong> Your name, avatar, and language preferences.</li>
@@ -83,9 +88,9 @@
     </ul>
     <p><em>Note: This action is irreversible. Once deleted, your data cannot be recovered.</em></p>
 
-    <h2>How to Request Deletion</h2>
+    <h2>3. How to Request Deletion</h2>
 
-    <h3>Option 1: In-App Deletion (Instant)</h3>
+    <h3>Option A: In-App Deletion (Instant)</h3>
     <p>If you still have the app installed and can log in:</p>
     <ol>
         <li>Open the <strong>IFRS Coach</strong> app.</li>
@@ -94,10 +99,10 @@
         <li>Confirm your choice. Your data will be deleted immediately.</li>
     </ol>
 
-    <h3>Option 2: Web Request (If you cannot access the app)</h3>
-    <p>If you have uninstalled the app or cannot log in, you may request deletion manually by contacting our support team. We will process your request within 30 days.</p>
+    <h3>Option B: Web Request (If you cannot access the app)</h3>
+    <p>If you have uninstalled the app or cannot log in, you may request deletion manually. We will process your request within 30 days.</p>
     
-    <p>Please click the button below to generate a deletion request email:</p>
+    <p>Click the button below to generate a deletion request email:</p>
 
     <a href="mailto:support@ifrsapp.zohodesk.eu?subject=Account Deletion Request&body=I request the deletion of my IFRS Coach account and all associated data.%0D%0A%0D%0AMy Registered Email: [Please insert your email here]" class="btn-delete">
         Request Account Deletion via Email
@@ -108,8 +113,9 @@
     </p>
 
     <div class="footer">
-        &copy; 2026 Mustafa Sharara. All rights reserved. <br>
-        <a href="privacy.html">View Privacy Policy</a>
+        &copy; 2026 Mustafa Sharara. All rights reserved.<br>
+        <a href="https://khnumx1z2.github.io/.github.io/privacy.html">Privacy Policy</a> | 
+        <a href="https://khnumx1z2.github.io/.github.io/terms.html">Terms of Service</a>
     </div>
 
 </body>
