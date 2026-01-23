@@ -1,0 +1,17 @@
+[{
+
+  "relation": ["delegate_permission/common.handle_all_urls"],
+
+  "target": {
+
+    "namespace": "android_app",
+
+    "package_name": "com.ifrsapp",
+
+    "sha256_cert_fingerprints": [  "3f:ee:61:3b:43:d9:0d:35:cb:98:8c:fa:25:84:85:57:48:3f:84:a5:08:b6:c5:a4:b1:98:47:69:02:84:3c:69"
+
+    ]
+
+  }
+
+}]
