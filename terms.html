@@ -4,112 +4,257 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms and Conditions - IFRS Coach</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --primary-color: #1a2530; /* Deep Navy */
+            --accent-color: #0366d6; /* Link Blue */
+            --bg-color: #f4f7f6; /* Soft Gray-Blue Background */
+            --card-bg: #ffffff;
+            --text-color: #4a5568;
+            --heading-color: #1a202c;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 40px 20px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* The Paper Card Container */
+        .legal-container {
+            background-color: var(--card-bg);
+            max-width: 850px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 60px 80px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08); /* Soft diffuse shadow */
+            opacity: 0; /* Start hidden for animation */
+            animation: containerFadeIn 1s ease-out forwards;
         }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif; /* Premium Serif for Headings */
+            color: var(--heading-color);
+        }
+
         h1 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        h2 {
-            margin-top: 30px;
-            color: #2c3e50;
-            font-size: 1.25rem;
-        }
-        h3 {
-            margin-top: 20px;
-            font-size: 1.1rem;
-            color: #444;
-        }
-        p, ul {
-            margin-bottom: 16px;
-        }
-        strong {
-            color: #000;
-        }
-        a {
-            color: #0366d6;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .date {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 30px;
-        }
-        .footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.9rem;
-            color: #666;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            border-bottom: none;
             text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            margin-top: 25px;
+            color: #2d3748;
+        }
+
+        p, ul {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        strong {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* The Date Badge */
+        .date-badge {
+            display: block;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #718096;
+            margin-bottom: 50px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Lists */
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Links */
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-bottom: 1px dotted transparent;
+        }
+
+        a:hover {
+            color: #024bb0;
+            border-bottom: 1px solid #024bb0;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.9rem;
+            color: #a0aec0;
+        }
+
+        /* --- Professional Scroll Animations --- */
+        
+        /* The class we add via JS to trigger animation */
+        .reveal-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); /* Smooth cubic bezier */
+        }
+
+        .reveal-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Initial Page Load Animation */
+        @keyframes containerFadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            body { padding: 20px 10px; }
+            .legal-container { padding: 40px 25px; }
+            h1 { font-size: 2rem; }
         }
     </style>
 </head>
 <body>
 
-    <h1>Terms and Conditions</h1>
-    <p class="date">Effective Date: January 1, 2026</p>
+    <div class="legal-container">
+        <h1>Terms and Conditions</h1>
+        <span class="date-badge">Effective Date: January 1, 2026</span>
 
-    <h2>1. Acceptance of Terms</h2>
-    <p>By downloading, accessing, or using the IFRS Coach application ("App"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+        <div class="reveal-section">
+            <h2>1. Acceptance of Terms</h2>
+            <p>By downloading, accessing, or using the IFRS Coach application ("App"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+        </div>
 
-    <h2>2. Disclaimer & Intellectual Property</h2>
-    
-    <h3>a. Independent Developer</h3>
-    <p>This App is developed by <strong>Mustafa Sharara</strong> and is <strong>NOT</strong> affiliated with, endorsed by, or approved by the IFRS Foundation.</p>
+        <div class="reveal-section">
+            <h2>2. Disclaimer & Intellectual Property</h2>
+            
+            <h3>a. Independent Developer</h3>
+            <p>This App is developed by <strong>Mustafa Sharara</strong> and is <strong>NOT</strong> affiliated with, endorsed by, or approved by the IFRS Foundation.</p>
 
-    <h3>b. Trademarks</h3>
-    <p>'IFRS', 'IASB', 'IFRIC', 'IAS', and 'SIC' are registered trademarks of the IFRS Foundation. They are used in this App solely for educational and referential purposes under the principle of "Fair Use" to describe the content being taught.</p>
+            <h3>b. Trademarks</h3>
+            <p>'IFRS', 'IASB', 'IFRIC', 'IAS', and 'SIC' are registered trademarks of the IFRS Foundation. They are used in this App solely for educational and referential purposes under the principle of "Fair Use" to describe the content being taught.</p>
 
-    <h3>c. Content Ownership</h3>
-    <ul>
-        <li>The original text of the IFRS Standards is copyright © IFRS Foundation.</li>
-        <li>The summaries, explanations, quizzes, and flashcards provided in this App are original works created by the Developer and are protected by copyright law.</li>
-    </ul>
+            <h3>c. Content Ownership</h3>
+            <ul>
+                <li>The original text of the IFRS Standards is copyright © IFRS Foundation.</li>
+                <li>The summaries, explanations, quizzes, and flashcards provided in this App are original works created by the Developer and are protected by copyright law.</li>
+            </ul>
 
-    <h3>d. No Professional Advice</h3>
-    <p>The content provided in this App is for educational and informational purposes only. It does <strong>NOT</strong> constitute professional accounting, financial, or legal advice. The Developer is not responsible for any financial decisions made based on the information in this App. Always consult the official standards and a qualified professional for specific accounting matters.</p>
+            <h3>d. No Professional Advice</h3>
+            <p>The content provided in this App is for educational and informational purposes only. It does <strong>NOT</strong> constitute professional accounting, financial, or legal advice. The Developer is not responsible for any financial decisions made based on the information in this App. Always consult the official standards and a qualified professional for specific accounting matters.</p>
+        </div>
 
-    <h2>3. License to Use</h2>
-    <p>We grant you a personal, non-exclusive, non-transferable, revocable license to use the App for your personal, non-commercial use. You agree not to:</p>
-    <ul>
-        <li>Reproduce, duplicate, copy, sell, or exploit any portion of the App.</li>
-        <li>Reverse engineer or attempt to extract the source code of the App.</li>
-        <li>Use the App for any illegal or unauthorized purpose.</li>
-    </ul>
+        <div class="reveal-section">
+            <h2>3. License to Use</h2>
+            <p>We grant you a personal, non-exclusive, non-transferable, revocable license to use the App for your personal, non-commercial use. You agree not to:</p>
+            <ul>
+                <li>Reproduce, duplicate, copy, sell, or exploit any portion of the App.</li>
+                <li>Reverse engineer or attempt to extract the source code of the App.</li>
+                <li>Use the App for any illegal or unauthorized purpose.</li>
+            </ul>
+        </div>
 
-    <h2>4. User-Generated Content</h2>
-    <p>Any notes or data you create within the App are stored locally on your device. We are not responsible for the loss of this data due to device failure, uninstallation, or other causes.</p>
+        <div class="reveal-section">
+            <h2>4. User-Generated Content</h2>
+            <p>Any notes or data you create within the App are stored locally on your device. We are not responsible for the loss of this data due to device failure, uninstallation, or other causes.</p>
+        </div>
 
-    <h2>5. Updates and Availability</h2>
-    <p>We reserve the right to modify, suspend, or discontinue the App (or any part thereof) at any time with or without notice. We are not liable to you or any third party for any modification, suspension, or discontinuance of the App.</p>
+        <div class="reveal-section">
+            <h2>5. Updates and Availability</h2>
+            <p>We reserve the right to modify, suspend, or discontinue the App (or any part thereof) at any time with or without notice. We are not liable to you or any third party for any modification, suspension, or discontinuance of the App.</p>
+        </div>
 
-    <h2>6. Limitation of Liability</h2>
-    <p>To the fullest extent permitted by law, the Developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the App.</p>
+        <div class="reveal-section">
+            <h2>6. Limitation of Liability</h2>
+            <p>To the fullest extent permitted by law, the Developer shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your access to or use of or inability to access or use the App.</p>
+        </div>
 
-    <h2>7. Governing Law</h2>
-    <p>These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which the Developer resides, without regard to its conflict of law provisions.</p>
+        <div class="reveal-section">
+            <h2>7. Governing Law</h2>
+            <p>These Terms shall be governed and construed in accordance with the laws of the jurisdiction in which the Developer resides, without regard to its conflict of law provisions.</p>
+        </div>
 
-    <h2>8. Changes to Terms</h2>
-    <p>We reserve the right to update or modify these Terms at any time. Your continued use of the App following the posting of any changes constitutes acceptance of those changes.</p>
+        <div class="reveal-section">
+            <h2>8. Changes to Terms</h2>
+            <p>We reserve the right to update or modify these Terms at any time. Your continued use of the App following the posting of any changes constitutes acceptance of those changes.</p>
+        </div>
 
-    <h2>9. Contact Information</h2>
-    <p>If you have any questions about these Terms, please contact us at: <a href="mailto:support@ifrsapp.zohodesk.eu">support@ifrsapp.zohodesk.eu</a></p>
+        <div class="reveal-section">
+            <h2>9. Contact Information</h2>
+            <p>If you have any questions about these Terms, please contact us at: <a href="mailto:support@ifrsapp.zohodesk.eu">support@ifrsapp.zohodesk.eu</a></p>
+        </div>
 
-    <div class="footer">
-        &copy; 2026 Mustafa Sharara. All rights reserved.
+        <div class="footer reveal-section">
+            &copy; 2026 Mustafa Sharara. All rights reserved.
+        </div>
     </div>
+
+    <script>
+        // Simple Intersection Observer for "Reveal on Scroll"
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            const sections = document.querySelectorAll('.reveal-section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 
 </body>
 </html>
